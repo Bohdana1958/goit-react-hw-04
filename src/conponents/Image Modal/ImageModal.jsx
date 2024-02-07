@@ -8,7 +8,7 @@ export const ImageModal = ({ item, closeModal, modalIsOpen }) => {
       isOpen={modalIsOpen}
       onRequestClose={closeModal}
       contentLabel="Image Modal"
-      ariaHideApp={false} // Щоб уникнути попереджень про доступність
+      ariaHideApp={false}
       className={css.modalContent}
       overlayClassName={css.overlay}
     >
