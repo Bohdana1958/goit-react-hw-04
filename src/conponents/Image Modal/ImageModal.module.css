@@ -1,0 +1,62 @@
+/* styles.module.css */
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* темний колір з прозорістю */
+  z-index: 1000; /* забезпечуємо, щоб оверлей був поверх усіх інших елементів */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalContent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* центруємо вікно по горизонталі та вертикалі */
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* тінь для модального вікна */
+  z-index: 1001; /* забезпечуємо, щоб модальне вікно було поверх оверлея */
+  width: auto; /* Автоматична ширина в залежності від контенту */
+  max-width: 90%; /* Максимальна ширина */
+  height: auto; /* Автоматична висота */
+  max-height: 90%; /* Максимальна висота */
+  overflow: auto; /* Дозволяємо прокрутку вмісту всередині */
+}
+
+.modalBtn {
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--color-dark);
+  position: absolute;
+  top: 10px; /* розміщення кнопки відносно верхнього краю */
+  right: 10px; /* розміщення кнопки відносно правого краю */
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: antiquewhite;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1002; /* забезпечення, щоб кнопка була поверх іншого вмісту */
+}
+.modalBtn:hover {
+  background-color: aliceblue;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cardModal {
+  height: 100%;
+  background-color: var(--color-light);
+  border: 4px solid #fff;
+  border-radius: 16px;
+  overflow: hidden;
+}
